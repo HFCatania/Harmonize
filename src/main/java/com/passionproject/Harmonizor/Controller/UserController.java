@@ -8,18 +8,27 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/api")
 @CrossOrigin
 public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping(value="/users")
+    @PostMapping(path="/users")
     public ResponseEntity<User> create(@RequestBody User user){
         try{
             return new ResponseEntity<>(userService.create(user), HttpStatus.CREATED);
         }catch (Exception e){
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping(path="/users")
+    public ResponseEntity<Iterable<User>> findAll(){
+        try{
+            return new ResponseEntity<Iterable<User>>(userService.findAll(), HttpStatus.OK);
+        } catch (Exception e){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
     }
 }

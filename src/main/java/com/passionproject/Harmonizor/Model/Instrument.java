@@ -10,6 +10,7 @@ public class Instrument {
     private Long instrumentId;
     private String instrumentName;
     @ManyToMany(mappedBy = "user")
+    @ElementCollection
     private Set<User> users;
 
     public Instrument() {
