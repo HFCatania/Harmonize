@@ -1,12 +1,16 @@
 package com.passionproject.Harmonizor.Model;
 
 
+import org.hibernate.annotations.Fetch;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 @Entity
-//@Table(name ="users")
+@Table(name ="user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,21 +22,25 @@ public class User {
     private String city;
     private String state;
     private String country;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_instruments",
                 joinColumns = @JoinColumn(name = "user_id"),
                 inverseJoinColumns = @JoinColumn(name = "instrument_id"))
     @ElementCollection
-    private Set<Instrument> instruments;
+    private List<Instrument> instruments = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_genre",
+                joinColumns = @JoinColumn(name = "user_id"),
+                inverseJoinColumns = @JoinColumn(name = "genre_id"))
     @ElementCollection
-    private Set<Genre> genres;
+    private List<Genre> genres = new ArrayList<>();
     private String experienceLevel;
 
 
 
     public User() { }
 
-    public User(String firstName, String lastName, String email, String passwordHash, Set<Instrument> instruments, Set<Genre> genres) {
+    public User(String firstName, String lastName, String email, String passwordHash, List<Instrument> instruments, List<Genre> genres) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -41,7 +49,7 @@ public class User {
         this.genres = genres;
     }
 
-    public User(Long id, String firstName, String lastName, String email, String passwordHash, Set<Instrument> instruments, Set<Genre> genres) {
+    public User(Long id, String firstName, String lastName, String email, String passwordHash, List<Instrument> instruments, List<Genre> genres) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -87,19 +95,19 @@ public class User {
 
     public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
 
-    public Set<Instrument> getInstruments() {
+    public List<Instrument> getInstruments() {
         return instruments;
     }
 
-    public void setInstruments(Set<Instrument> instruments) {
+    public void setInstruments(List<Instrument> instruments) {
         this.instruments = instruments;
     }
 
-    public Set<Genre> getGenres() {
+    public List<Genre> getGenres() {
         return genres;
     }
 
-    public void setGenres(Set<Genre> genres) {
+    public void setGenres(List<Genre> genres) {
         this.genres = genres;
     }
 

@@ -1,16 +1,21 @@
 package com.passionproject.Harmonizor.Model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
+@Table(name = "genres")
 public class Genre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long genreId;
     private String genreName;
-    @ElementCollection
-    private Set<User> users;
+//    @ManyToMany(mappedBy = "user_genre")
+//    @ElementCollection
+//    private List<User> users = new ArrayList<>();
 
     public Genre() {
     }
@@ -36,11 +41,11 @@ public class Genre {
         this.genreName = genreName;
     }
 
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
-    }
+//    public List<User> getUsers() {
+//        return users;
+//    }
+//
+//    public void setUsers(List<User> users) {
+//        this.users = users;
+//    }
 }

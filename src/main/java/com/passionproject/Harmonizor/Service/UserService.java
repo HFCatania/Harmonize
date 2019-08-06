@@ -10,7 +10,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User create(User user){ return (User) userRepository.save(user); }
+    public User create(User user){ return userRepository.save(user); }
 
     public Iterable<User> findAll(){ return userRepository.findAll();}
 
