@@ -49,13 +49,13 @@ public class UserService {
         return userRepository.save(endUser);
     }
 
-    public String registerUser(CreateUser user){
+    public String registerUser(User user){
 
-        User endUser = convertUser(user);
-        if (!userRepository.existsByEmail(endUser.getEmail())) {
-            endUser.setPassword(passwordEncoder.encode(endUser.getPassword()));
-            userRepository.save(endUser);
-            return jwtTokenProvider.createToken(endUser.getEmail());
+//        User endUser = convertUser(user);
+        if (!userRepository.existsByEmail(user.getEmail())) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            userRepository.save(user);
+            return jwtTokenProvider.createToken(user.getEmail());
         } else {
             throw new CustomException("That email address is already linked to an account.", HttpStatus.UNPROCESSABLE_ENTITY);
         }

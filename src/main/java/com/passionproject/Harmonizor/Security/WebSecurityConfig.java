@@ -27,10 +27,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authorizeRequests()//
-            .antMatchers("/api/users/login").permitAll()//
+            .antMatchers("/api/login").permitAll()//
             .antMatchers("/api/users").permitAll()//
             .antMatchers("/api/instruments").permitAll()//
             .antMatchers("/api/genres").permitAll()//
+            .antMatchers("/api/register").permitAll()//
             .anyRequest().authenticated();
 
         http.exceptionHandling().accessDeniedPage("/login");
