@@ -3,17 +3,37 @@ package com.passionproject.Harmonizor.Service;
 import com.passionproject.Harmonizor.Model.CreateUser;
 import com.passionproject.Harmonizor.Model.User;
 import com.passionproject.Harmonizor.Repository.UserRepository;
+import com.passionproject.Harmonizor.Security.CustomException;
+import com.passionproject.Harmonizor.Security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Service
 public class UserService {
-    @Autowired
-    private UserRepository userRepository;
 
-    public User create(CreateUser user){
+    UserRepository userRepository;
+    AuthenticationManager authenticationManager;
+    JwtTokenProvider jwtTokenProvider;
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public UserService(UserRepository userRepository, AuthenticationManager authenticationManager, JwtTokenProvider jwtTokenProvider, PasswordEncoder passwordEncoder){
+        this.userRepository = userRepository;
+        this.authenticationManager = authenticationManager;
+        this.jwtTokenProvider = jwtTokenProvider;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+    public User convertUser(CreateUser user){
         System.out.println(user.getCity());
-        User endUser= new User();
+        User endUser = new User();
         endUser.setEmail(user.getEmail());
         endUser.setPassword(user.getPassword());
         endUser.setFirstName(user.getFirstName());
@@ -21,9 +41,41 @@ public class UserService {
         endUser.setCity(user.getCity());
         endUser.setState(user.getState());
         endUser.setCountry(user.getCountry());
-        return userRepository.save(endUser); }
+        return endUser;
+    }
+
+    public User create(CreateUser user) {
+        User endUser = convertUser(user);
+        return userRepository.save(endUser);
+    }
+
+    public String registerUser(CreateUser user){
+
+        User endUser = convertUser(user);
+        if (!userRepository.existsByEmail(endUser.getEmail())) {
+            endUser.setPassword(passwordEncoder.encode(endUser.getPassword()));
+            userRepository.save(endUser);
+            return jwtTokenProvider.createToken(endUser.getEmail());
+        } else {
+            throw new CustomException("That email address is already linked to an account.", HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+    }
 
     public Iterable<User> findAll(){ return userRepository.findAll();}
+
+    public String logIn(String email, String password){
+        try {
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
+            return jwtTokenProvider.createToken(email);
+        } catch (AuthenticationException e){
+            System.out.println(e.getMessage());
+            throw new CustomException("Invalid email/password supplied", HttpStatus.UNPROCESSABLE_ENTITY);
+        }
+    }
+
+    public User whoami(HttpServletRequest req){
+        return userRepository.findByEmail(jwtTokenProvider.getEmail(jwtTokenProvider.resolveToken(req)));
+    }
 
 //    public User show(Long id) { return userRepository.findById(id); }
 }
