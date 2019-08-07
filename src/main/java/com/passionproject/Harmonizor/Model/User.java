@@ -18,45 +18,45 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    private String passwordHash;
+    private String password;
     private String city;
     private String state;
     private String country;
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_instruments",
-                joinColumns = @JoinColumn(name = "user_id"),
-                inverseJoinColumns = @JoinColumn(name = "instrument_id"))
-    @ElementCollection
-    private List<Instrument> instruments = new ArrayList<>();
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_genre",
-                joinColumns = @JoinColumn(name = "user_id"),
-                inverseJoinColumns = @JoinColumn(name = "genre_id"))
-    @ElementCollection
-    private List<Genre> genres = new ArrayList<>();
-    private String experienceLevel;
+//    @ManyToMany(fetch = FetchType.LAZY)
+//    @JoinTable(name = "user_instruments",
+//                joinColumns = @JoinColumn(name = "user_id"),
+//                inverseJoinColumns = @JoinColumn(name = "instrument_id"))
+//    @ElementCollection
+//    private List<Instrument> instruments = new ArrayList<>();
+//    @ManyToMany(fetch = FetchType.LAZY)
+//    @JoinTable(name = "user_genre",
+//                joinColumns = @JoinColumn(name = "user_id"),
+//                inverseJoinColumns = @JoinColumn(name = "genre_id"))
+//    @ElementCollection
+//    private List<Genre> genres = new ArrayList<>();
+//    private String experienceLevel;
 
 
 
     public User() { }
 
-    public User(String firstName, String lastName, String email, String passwordHash, List<Instrument> instruments, List<Genre> genres) {
+    public User(String firstName, String lastName, String email, String password, List<Instrument> instruments, List<Genre> genres) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.passwordHash = passwordHash;
-        this.instruments = instruments;
-        this.genres = genres;
+        this.password = password;
+//        this.instruments = instruments;
+//        this.genres = genres;
     }
 
-    public User(Long id, String firstName, String lastName, String email, String passwordHash, List<Instrument> instruments, List<Genre> genres) {
+    public User(Long id, String firstName, String lastName, String email, String password, List<Instrument> instruments, List<Genre> genres) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.passwordHash = passwordHash;
-        this.instruments = instruments;
-        this.genres = genres;
+        this.password = password;
+//        this.instruments = instruments;
+//        this.genres = genres;
     }
 
     public Long getId() {
@@ -91,25 +91,25 @@ public class User {
         this.email = email;
     }
 
-    public String getPasswordHash() { return passwordHash; }
+    public String getPassword() { return password; }
 
-    public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
+    public void setPassword(String password) { this.password = password; }
 
-    public List<Instrument> getInstruments() {
-        return instruments;
-    }
-
-    public void setInstruments(List<Instrument> instruments) {
-        this.instruments = instruments;
-    }
-
-    public List<Genre> getGenres() {
-        return genres;
-    }
-
-    public void setGenres(List<Genre> genres) {
-        this.genres = genres;
-    }
+//    public List<Instrument> getInstruments() {
+//        return instruments;
+//    }
+//
+//    public void setInstruments(List<Instrument> instruments) {
+//        this.instruments = instruments;
+//    }
+//
+//    public List<Genre> getGenres() {
+//        return genres;
+//    }
+//
+//    public void setGenres(List<Genre> genres) {
+//        this.genres = genres;
+//    }
 
     public String getCity() {
         return city;
@@ -135,14 +135,14 @@ public class User {
     public void setCountry(String country) {
         this.country = country;
     }
-
-    public String getExperienceLevel() {
-        return experienceLevel;
-    }
-
-    public void setExperienceLevel(String experienceLevel) {
-        this.experienceLevel = experienceLevel;
-    }
+//
+//    public String getExperienceLevel() {
+//        return experienceLevel;
+//    }
+//
+//    public void setExperienceLevel(String experienceLevel) {
+//        this.experienceLevel = experienceLevel;
+//    }
 
     //    public enum experienceLevel{
 //        BEGGINER,

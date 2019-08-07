@@ -6,18 +6,18 @@ public class CreateUser {
     private String firstName;
     private String lastName;
     private String email;
-    private String passwordHash;
+    private String password;
     private String city;
     private String state;
     private String country;
 
     public CreateUser() { }
 
-    public CreateUser(String firstName, String lastName, String email, String passwordHash, String city, String state, String country) {
+    public CreateUser(String firstName, String lastName, String email, String password, String city, String state, String country) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.passwordHash = passwordHash;
+        this.password = password;
         this.city = city;
         this.state = state;
         this.country = country;
@@ -47,12 +47,12 @@ public class CreateUser {
         this.email = email;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setPassword(String passwordHash) {
+        this.password = passwordHash;
     }
 
     public String getCity() {

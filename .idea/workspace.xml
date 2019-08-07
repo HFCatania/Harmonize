@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cb38fad-be05-465d-b928-2c1f770a8e42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/GenreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/InstrumentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/CreateUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/harmnizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/harmnizer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Instrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Instrument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/CreateUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/GenreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/GenreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/InstrumentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/InstrumentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/passionproject/harmnizer/HarmonizerApplicationTests.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +27,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="78">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="23" column="27" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="287">
+              <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Genre.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="47" column="10" selection-start-line="43" selection-start-column="5" selection-end-line="47" selection-end-column="10" />
+            <state relative-caret-position="90">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,67 +61,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/GenreService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/GenreController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/InstrumentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/InstrumentRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="15" selection-start-line="15" selection-start-column="1" selection-end-line="17" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/CreateUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+            <state relative-caret-position="-137">
+              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
               <folding>
                 <element signature="e#439#440#0" expanded="true" />
                 <element signature="e#471#472#0" expanded="true" />
@@ -165,6 +99,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -177,6 +123,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -188,27 +139,28 @@
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/GenreRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/GenreService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/InstrumentService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/InstrumentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/GenreController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Genre.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Instrument.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/passionproject/harmnizer/UserControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/passionproject/Harmonizor/Controller/UserControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/passionproject/harmnizer/UserControllerTestTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/passionproject/Harmonizor/Controller/UserControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/CreateUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/UserService.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="808" />
+    <option name="x" value="-217" />
+    <option name="y" value="-1048" />
+    <option name="width" value="1896" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -266,15 +218,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Harmonizor" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="harmnizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Harmonize" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Harmonizor" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="harmnizer" type="b2602c69:ProjectViewProjectNode" />
@@ -370,7 +313,7 @@
       <workItem from="1564173627303" duration="23444000" />
       <workItem from="1564928747581" duration="7000" />
       <workItem from="1564936605251" duration="3584000" />
-      <workItem from="1565101646959" duration="2203000" />
+      <workItem from="1565101646959" duration="10096000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit&#10;Basic user mvc added &#10;instrument and genre models created">
       <created>1564173929428</created>
@@ -386,15 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564504470881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="genre and instrument mvc added, createuser model made.  initial swing at tests.">
+      <created>1565125459759</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565125459759</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29238000" />
+    <option name="totallyTimeSpent" value="37131000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="808" extended-state="0" />
-    <editor active="true" />
+    <frame x="-217" y="-1048" width="1896" height="1048" extended-state="0" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -402,19 +351,19 @@
       <window_info id="Favorites" order="3" sideWeight="0.50147057" side_tool="true" weight="0.24821173" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4985294" visible="true" weight="0.2546495" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4985294" visible="true" weight="0.19201726" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.32957748" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3275463" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32681563" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" />
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.5642458" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.30962342" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -437,7 +386,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit&#10;Basic user mvc added &#10;instrument and genre models created" />
     <MESSAGE value="fleshed out db annotations&#10;minor changes to mvc &#10;config updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="fleshed out db annotations&#10;minor changes to mvc &#10;config updates" />
+    <MESSAGE value="genre and instrument mvc added, createuser model made.  initial swing at tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="genre and instrument mvc added, createuser model made.  initial swing at tests." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/HELP.md">
@@ -480,16 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Event.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -511,13 +451,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -548,10 +481,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Genre.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/passionproject/harmnizer/UserControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="47" column="10" selection-start-line="43" selection-start-column="5" selection-end-line="47" selection-end-column="10" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/passionproject/harmnizer/UserControllerTestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/InstrumentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="15" selection-start-line="15" selection-start-column="1" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/InstrumentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/GenreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -568,71 +542,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/GenreController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/Genre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+        <state relative-caret-position="235">
+          <caret line="47" column="10" selection-start-line="43" selection-start-column="5" selection-end-line="47" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/InstrumentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/InstrumentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/passionproject/harmnizer/UserControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/passionproject/harmnizer/UserControllerTestTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/passionproject/Harmonizor/Controller/UserControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="101">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="15" selection-start-line="15" selection-start-column="1" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -641,8 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/CreateUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="-137">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
           <folding>
             <element signature="e#439#440#0" expanded="true" />
             <element signature="e#471#472#0" expanded="true" />
@@ -672,6 +602,36 @@
             <element signature="e#1361#1362#0" expanded="true" />
             <element signature="e#1407#1408#0" expanded="true" />
             <element signature="e#1445#1446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/passionproject/Harmonizor/Service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
