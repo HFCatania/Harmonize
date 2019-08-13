@@ -1,7 +1,9 @@
 package com.passionproject.Harmonizor.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.Fetch;
+import sun.plugin.util.UserProfile;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,44 +21,29 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    private String city;
-    private String state;
-    private String country;
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(name = "user_instruments",
-//                joinColumns = @JoinColumn(name = "user_id"),
-//                inverseJoinColumns = @JoinColumn(name = "instrument_id"))
-//    @ElementCollection
-//    private List<Instrument> instruments = new ArrayList<>();
-//    @ManyToMany(fetch = FetchType.LAZY)
-//    @JoinTable(name = "user_genre",
-//                joinColumns = @JoinColumn(name = "user_id"),
-//                inverseJoinColumns = @JoinColumn(name = "genre_id"))
-//    @ElementCollection
-//    private List<Genre> genres = new ArrayList<>();
-//    private String experienceLevel;
+    @JsonManagedReference
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
+    private UserProfile userProfile;
 
 
 
     public User() { }
 
-    public User(String firstName, String lastName, String email, String password, List<Instrument> instruments, List<Genre> genres) {
+    public User(String firstName, String lastName, String email, String password, UserProfile userProfile) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-//        this.instruments = instruments;
-//        this.genres = genres;
+        this.userProfile = userProfile;
     }
 
-    public User(Long id, String firstName, String lastName, String email, String password, List<Instrument> instruments, List<Genre> genres) {
+    public User(Long id, String firstName, String lastName, String email, String password, UserProfile userProfile) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-//        this.instruments = instruments;
-//        this.genres = genres;
+        this.userProfile = userProfile;
     }
 
     public Long getId() {
@@ -95,54 +82,13 @@ public class User {
 
     public void setPassword(String password) { this.password = password; }
 
-//    public List<Instrument> getInstruments() {
-//        return instruments;
-//    }
-//
-//    public void setInstruments(List<Instrument> instruments) {
-//        this.instruments = instruments;
-//    }
-//
-//    public List<Genre> getGenres() {
-//        return genres;
-//    }
-//
-//    public void setGenres(List<Genre> genres) {
-//        this.genres = genres;
-//    }
-
-    public String getCity() {
-        return city;
+    public UserProfile getUserProfile() {
+        return userProfile;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
     }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-//
-//    public String getExperienceLevel() {
-//        return experienceLevel;
-//    }
-//
-//    public void setExperienceLevel(String experienceLevel) {
-//        this.experienceLevel = experienceLevel;
-//    }
 
     //    public enum experienceLevel{
 //        BEGGINER,

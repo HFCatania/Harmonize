@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 @Service
 public class UserService {
 
-    UserRepository userRepository;
-    AuthenticationManager authenticationManager;
-    JwtTokenProvider jwtTokenProvider;
+    private UserRepository userRepository;
+    private AuthenticationManager authenticationManager;
+    private JwtTokenProvider jwtTokenProvider;
     private PasswordEncoder passwordEncoder;
 
     @Autowired
@@ -32,15 +32,15 @@ public class UserService {
     }
 
     public User convertUser(CreateUser user){
-        System.out.println(user.getCity());
+//        System.out.println(user.getCity());
         User endUser = new User();
         endUser.setEmail(user.getEmail());
         endUser.setPassword(user.getPassword());
         endUser.setFirstName(user.getFirstName());
         endUser.setLastName(user.getLastName());
-        endUser.setCity(user.getCity());
-        endUser.setState(user.getState());
-        endUser.setCountry(user.getCountry());
+//        endUser.setCity(user.getCity());
+//        endUser.setState(user.getState());
+//        endUser.setCountry(user.getCountry());
         return endUser;
     }
 

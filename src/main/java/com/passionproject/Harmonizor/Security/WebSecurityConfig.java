@@ -27,11 +27,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authorizeRequests()//
-            .antMatchers("/api/login").permitAll()//
-            .antMatchers("/api/users").permitAll()//
-            .antMatchers("/api/instruments").permitAll()//
-            .antMatchers("/api/genres").permitAll()//
-            .antMatchers("/api/register").permitAll()//
+            .antMatchers("/login").permitAll()//
+            .antMatchers("/users").permitAll()//
+            .antMatchers("/instruments").permitAll()//
+            .antMatchers("/genres").permitAll()//
+            .antMatchers("/register").permitAll()//
             .anyRequest().authenticated();
 
         http.exceptionHandling().accessDeniedPage("/login");
@@ -46,7 +46,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     @Override
-    public AuthenticationManager authenticationManager() throws Exception {
+    public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
 }
