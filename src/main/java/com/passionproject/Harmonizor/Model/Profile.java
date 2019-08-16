@@ -33,5 +33,68 @@ public class Profile {
                 inverseJoinColumns = @JoinColumn(name = "genre_id"))
     @ElementCollection
     private List<Genre> genres = new ArrayList<>();
-    private String experienceLevel;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public Integer getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(Integer zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public List<Instrument> getInstruments() {
+        return instruments;
+    }
+
+    public void setInstruments(List<Instrument> instruments) {
+        this.instruments = instruments;
+    }
+
+    public List<Genre> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<Genre> genres) {
+        this.genres = genres;
+    }
 }
