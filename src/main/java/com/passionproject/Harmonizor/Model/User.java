@@ -2,14 +2,10 @@ package com.passionproject.Harmonizor.Model;
 
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import org.hibernate.annotations.Fetch;
-import sun.plugin.util.UserProfile;
+
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
 
 @Entity
 @Table(name ="user")
@@ -23,27 +19,27 @@ public class User {
     private String password;
     @JsonManagedReference
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
-    private UserProfile userProfile;
+    private Profile profile;
 
 
 
     public User() { }
 
-    public User(String firstName, String lastName, String email, String password, UserProfile userProfile) {
+    public User(String firstName, String lastName, String email, String password, Profile profile) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.userProfile = userProfile;
+        this.profile = profile;
     }
 
-    public User(Long id, String firstName, String lastName, String email, String password, UserProfile userProfile) {
+    public User(Long id, String firstName, String lastName, String email, String password, Profile profile) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.userProfile = userProfile;
+        this.profile = profile;
     }
 
     public Long getId() {
@@ -82,12 +78,12 @@ public class User {
 
     public void setPassword(String password) { this.password = password; }
 
-    public UserProfile getUserProfile() {
-        return userProfile;
+    public Profile getProfile() {
+        return profile;
     }
 
-    public void setUserProfile(UserProfile userProfile) {
-        this.userProfile = userProfile;
+    public void setProfile(Profile Profile) {
+        this.profile = profile;
     }
 
     //    public enum experienceLevel{
