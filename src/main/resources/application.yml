@@ -3,9 +3,9 @@
 spring:
   profiles: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/harmoize
+    url: jdbc:mysql://localhost:3306/harmonize
     username: root
-    password: password
+    password: Tianshan9942!
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
