@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping(value = "/api")
-@CrossOrigin
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class UserController {
 
     private ModelMapper modelMapper;
@@ -52,7 +52,7 @@ public class UserController {
         return userService.logIn(email, password);
     }
 
-    @PostMapping("/register")
+    @PostMapping(path = "/register")
     @ResponseStatus(HttpStatus.CREATED)
     public String register(@RequestBody UserDataDTO user){
         return userService.registerUser(modelMapper.map(user, User.class));
