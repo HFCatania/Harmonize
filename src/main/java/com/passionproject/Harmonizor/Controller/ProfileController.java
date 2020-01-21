@@ -17,6 +17,7 @@ public class ProfileController {
     @Autowired
     ProfileService profileService;
 
+    @CrossOrigin
     @PostMapping(path = "/profiles")
     public ResponseEntity<Profile> create(@RequestBody Profile profile){
         try{

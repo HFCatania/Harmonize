@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping(value = "/api")
-@CrossOrigin(origins = {"http://localhost:4200"})
+//@RequestMapping(value = "/api")
+@CrossOrigin(origins ="*", allowedHeaders = "*")
 public class UserController {
 
     private ModelMapper modelMapper;
@@ -27,6 +27,7 @@ public class UserController {
         this.modelMapper = modelMapper;
         this.userService = userService;
     }
+
 
     @PostMapping(path="/users")
     public ResponseEntity<User> create(@RequestBody CreateUser user){
