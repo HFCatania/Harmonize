@@ -9,7 +9,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -49,13 +48,13 @@ public class UserController {
 
     @PostMapping(path="/login")
     @ResponseStatus(HttpStatus.CREATED)
-    public String login(@RequestParam String email, @RequestParam String password){
-        return userService.logIn(email, password);
+    public User login(@RequestBody User user){
+        return userService.logIn(user);
     }
 
     @PostMapping(path = "/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public String register(@RequestBody UserDataDTO user){
+    public User register(@RequestBody UserDataDTO user){
         return userService.registerUser(modelMapper.map(user, User.class));
     }
 

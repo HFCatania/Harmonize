@@ -20,6 +20,7 @@ public class User {
     @JsonManagedReference
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
     private Profile profile;
+    private String Token;
 
 
 
@@ -85,6 +86,10 @@ public class User {
     public void setProfile(Profile Profile) {
         this.profile = profile;
     }
+
+    public String getToken() { return Token; }
+
+    public void setToken(String token) { Token = token; }
 
     //    public enum experienceLevel{
 //        BEGGINER,

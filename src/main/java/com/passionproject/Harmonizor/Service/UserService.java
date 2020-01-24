@@ -1,6 +1,7 @@
 package com.passionproject.Harmonizor.Service;
 
 import com.passionproject.Harmonizor.Model.CreateUser;
+import com.passionproject.Harmonizor.Model.Profile;
 import com.passionproject.Harmonizor.Model.User;
 import com.passionproject.Harmonizor.Repository.UserRepository;
 import com.passionproject.Harmonizor.Security.CustomException;
@@ -49,30 +50,56 @@ public class UserService {
         User endUser = convertUser(user);
         return userRepository.save(endUser);
     }
-
-    public String registerUser(User user){
-
+//
+//    public String registerUser(User user){
+//
 //        User endUser = convertUser(user);
+//        if (!userRepository.existsByEmail(user.getEmail())) {
+//            user.setPassword(passwordEncoder.encode(user.getPassword()));
+//            userRepository.save(user);
+//            return jwtTokenProvider.createToken(user.getEmail());
+//        } else {
+//            throw new CustomException("That email address is already linked to an account.", HttpStatus.UNPROCESSABLE_ENTITY);
+//        }
+//    }
+
+    public User registerUser(User user) {
         if (!userRepository.existsByEmail(user.getEmail())) {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             userRepository.save(user);
-            return jwtTokenProvider.createToken(user.getEmail());
+            Profile profile = new Profile(user.getId());
+            user.setProfile(profile);
+            user.setToken(jwtTokenProvider.createToken(user.getEmail()));
+            return userRepository.save(user);
         } else {
-            throw new CustomException("That email address is already linked to an account.", HttpStatus.UNPROCESSABLE_ENTITY);
+            throw new CustomException("Username is already in use", HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
 
     public Iterable<User> findAll(){ return userRepository.findAll();}
 
-    public String logIn(String email, String password){
+    public User logIn(User user) {
         try {
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
-            return jwtTokenProvider.createToken(email);
-        } catch (AuthenticationException e){
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword()));
+            user = userRepository.findByEmail(user.getEmail());
+            user.setToken(jwtTokenProvider.createToken(user.getEmail()));
+            return user;
+        } catch (AuthenticationException e) {
             System.out.println(e.getMessage());
-            throw new CustomException("Invalid email/password supplied", HttpStatus.UNPROCESSABLE_ENTITY);
+            throw new CustomException("Invalid username/password supplied", HttpStatus.UNPROCESSABLE_ENTITY);
         }
     }
+
+
+//    public String logIn(String email, String password){
+//        try {
+//            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
+//            return jwtTokenProvider.createToken(email);
+//        } catch (AuthenticationException e){
+//            System.out.println(e.getMessage());
+//            throw new CustomException("Invalid email/password supplied", HttpStatus.UNPROCESSABLE_ENTITY);
+//        }
+//    }
 
     public User whoami(HttpServletRequest req){
         return userRepository.findByEmail(jwtTokenProvider.getEmail(jwtTokenProvider.resolveToken(req)));

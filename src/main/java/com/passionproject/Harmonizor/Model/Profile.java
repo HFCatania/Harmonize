@@ -34,6 +34,12 @@ public class Profile {
     @ElementCollection
     private List<Genre> genres = new ArrayList<>();
 
+    public Profile() {}
+
+    public Profile(Long id){
+        this.id = id;
+    }
+
     public Long getId() {
         return id;
     }
